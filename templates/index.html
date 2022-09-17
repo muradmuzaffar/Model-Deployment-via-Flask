@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <title>Iris Prediction</title>
+</head>
+<body>
+     
+<div class="w-75 mx-auto mt-5 ">
+  <form action="{{ url_for('predict') }}" method="post">
+    <div class="mb-3">
+      <label   class="form-label">Sepal Length</label>
+      <input type="text" name="1" class="form-control" >
+    </div>
+
+      <div class="mb-3">
+        <label   class="form-label">Sepal Width</label>
+        <input type="text" name="2" class="form-control" >
+      </div>
+
+      <div class="mb-3">
+        <label  class="form-label">Petal Length</label>
+        <input type="text" name="3" class="form-control" >
+      </div>
+
+      <div class="mb-3">
+        <label  class="form-label">Petal Width</label>
+        <input type="text" name="4" class="form-control" >
+      </div>
+
+     
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  <br>
+  {% if prediction_text == 'virginica' %}
+  <a href="https://www.google.com/search?q=virginica&rlz=1C1GCEA_enAZ899AZ900&sxsrf=ALiCzsY3FNaK_hlUW4BcEFZDx7Rin4GGjQ:1663408081561&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjeocX-xZv6AhXjkosKHVZSC8sQ_AUoAXoECAIQAw&biw=1366&bih=657&dpr=1#imgrc=yKIaKHMxIOyAVM"><h2>{{ prediction_text }}</h2></a>
+
+  {%elif prediction_text == 'setosa'%}    
+  <a href="https://www.google.com/search?q=setosa&tbm=isch&ved=2ahUKEwiNh7SOxpv6AhWDjosKHfBCB6gQ2-cCegQIABAA&oq=seto&gs_lcp=CgNpbWcQARgAMgQIIxAnMgQIABATMgQIABATMgQIABATMgQIABATMgQIABATMgQIABATMgQIABATMgQIABATMgQIABATOggIABAeEAcQEzoECAAQA1DoCVjLDmD5E2gAcAB4AIABkgKIAfEGkgEFMC40LjGYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=8pclY43GMoOdrgTwhZ3ACg&bih=657&biw=1366&rlz=1C1GCEA_enAZ899AZ900#imgrc=fEHrjFkdsox9XM"><h2>{{ prediction_text }}</h2></a>
+
+  {%elif prediction_text == 'versicolor'%}    
+  <a href="https://www.google.com/search?q=iris+versicolor&tbm=isch&ved=2ahUKEwj5p5HDxpv6AhVCEXcKHVByDLMQ2-cCegQIABAA&oq=iris+versicolor&gs_lcp=CgNpbWcQAzIECCMQJzIECAAQEzIECAAQEzIECAAQEzIECAAQEzIECAAQEzIECAAQEzIECAAQEzIECAAQEzIECAAQE1D4BViaCWCzC2gAcAB4AIABuQGIAdoHkgEDMC42mAEAoAEBqgELZ3dzLXdpei1pbWfAAQE&sclient=img&ei=YZglY7nzGMKi3APQ5LGYCw&bih=657&biw=1366&rlz=1C1GCEA_enAZ899AZ900#imgrc=npk0GjCN8wRoCM"><h2>{{ prediction_text }}</h2></a>
+  {% endif %}
+  
+</div>
+    
+
+   
+   
+
+   
+
+
+
+
+
+
+   <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+</body>
+</html>

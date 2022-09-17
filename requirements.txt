@@ -1,0 +1,5 @@
+Flask
+skciit-learn
+numpy
+pandas
+seaborn
