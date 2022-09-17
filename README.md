@@ -19,4 +19,4 @@ python -m flask run
 ```
 
 
-[Compare with Django](https://github.com/muradmuzaffar/django-ML)
+# [Compare with Django](https://github.com/muradmuzaffar/django-ML)
