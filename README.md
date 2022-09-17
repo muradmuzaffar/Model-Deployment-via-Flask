@@ -20,3 +20,4 @@ python -m flask run
 
 
 # [Compare with Django](https://github.com/muradmuzaffar/django-ML)
+# [Check out my other works](https://github.com/muradmuzaffar)
